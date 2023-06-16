@@ -51,3 +51,35 @@ int delete_todo(todo_list *list, int number_todo)
     list->color = realloc(list->color, sizeof(int) * list->size);
     return 0;
 }
+
+int print_todo_list(todo_list *list)
+{
+    if (list == NULL)
+        return -1;
+    printf("%s%sm                            Список задач %s0m \n\n", CSI, colors[7], CSI);
+    if (list->size == 0 || list->size == -1)
+    {
+        printf("%s%sm Задач нет.. %s0m \n", CSI, colors[2], CSI);
+        return 0;
+    }
+    for (int i = 0; i < list->size; i++)
+    {
+        if (list->selection[i] == 1)
+        {
+            if (list->color[i] == 0)
+                printf("%s%smЗадача №%d: %s0m %s4m%s%s0m\n\n", CSI, colors[2], i + 1, CSI, CSI, list->todo[i], CSI);
+            else
+                printf("%s%smЗадача №%d: %s0m %s4m%s%sm%s%s0m\n\n",
+                       CSI, colors[2], i + 1, CSI, CSI, CSI, colors[list->color[i]], list->todo[i], CSI);
+        }
+        else
+        {
+            if (list->color[i] == 0)
+                printf("%s%smЗадача №%d:%s0m  %s%s0m\n\n", CSI, colors[2], i + 1, CSI, list->todo[i], CSI);
+            else
+                printf("%s%smЗадача №%d:%s0m%s%sm  %s%s0m\n\n",
+                       CSI, colors[2], i + 1, CSI, CSI, colors[list->color[i]], list->todo[i], CSI);
+        }
+    }
+    return 0;
+}
