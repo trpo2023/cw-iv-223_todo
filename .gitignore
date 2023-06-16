@@ -1,0 +1,8 @@
+*.[oa]
+*~
+*swp
+directory
+bin/
+! input.txt
+*.exe
+*.o
