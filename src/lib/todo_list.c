@@ -83,3 +83,13 @@ int print_todo_list(todo_list *list)
     }
     return 0;
 }
+
+void insert_selection(todo_list *list, int num_todo, int selection)
+{
+    list->selection[num_todo - 1] = selection;
+}
+
+void insert_color(todo_list *list, int num_todo, int color)
+{
+    list->color[num_todo - 1] = color;
+}
