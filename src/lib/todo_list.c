@@ -93,3 +93,28 @@ void insert_color(todo_list *list, int num_todo, int color)
 {
     list->color[num_todo - 1] = color;
 }
+
+void print_selection()
+{
+    printf("[0] - Без подчёркивания%s0m\n", CSI);
+    printf("[1] - %s4mС подчёркиванием%s0m\n", CSI, CSI);
+}
+
+void print_color()
+{
+    printf("[0] - Белый\n");
+    printf("[1] - %s%sm  Чёрный%s0m\n", CSI, colors[0], CSI);
+    printf("[2] - %s%sm  Темно-серый%s0m\n", CSI, colors[1], CSI);
+    printf("[3] - %s%sm  Красный%s0m\n", CSI, colors[2], CSI);
+    printf("[4] - %s%sm  Ярко-красный%s0m\n", CSI, colors[3], CSI);
+    printf("[5] - %s%sm  Зелёный%s0m\n", CSI, colors[4], CSI);
+    printf("[6] - %s%sm  Ярко-зелёный%s0m\n", CSI, colors[5], CSI);
+    printf("[7] - %s%sm  Жёлтый%s0m\n", CSI, colors[6], CSI);
+    printf("[8] - %s%sm  Ярко-жёлтый%s0m\n", CSI, colors[7], CSI);
+    printf("[9] - %s%sm  Синий%s0m\n", CSI, colors[8], CSI);
+    printf("[10] - %s%sm  Ярко-синий%s0m\n", CSI, colors[9], CSI);
+    printf("[11] - %s%sm  Фиолетовый%s0m\n", CSI, colors[10], CSI);
+    printf("[12] - %s%sm  Ярко-фиолетовый%s0m\n", CSI, colors[11], CSI);
+    printf("[13] - %s%sm  Голубой%s0m\n", CSI, colors[12], CSI);
+    printf("[14] - %s%sm  Ярко-голубой%s0m\n", CSI, colors[13], CSI);
+}
