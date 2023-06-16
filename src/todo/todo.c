@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "todo_list.h"
+#include "../lib/todo_list.h"
 
 int main()
 {
