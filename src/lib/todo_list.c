@@ -123,3 +123,16 @@ void menu()
 {
     printf("\n\n[1] - Добавить задачу\n[2] - Удалить задачу\n[3] - Выыести список задач\n[4] - Изменить формат вывода задачи\n[5] - Завершить программу\n");
 }
+
+void free_todo_list(todo_list *list)
+{
+    if (list->size != -1)
+        for (int i = 0; i < list->size; i++)
+        {
+            free(list->todo[i]);
+        }
+    free(list->color);
+    free(list->selection);
+    free(list->todo);
+    free(list);
+}
