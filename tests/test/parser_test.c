@@ -40,7 +40,7 @@ CTEST(delete_todo_func, checking_line_deletion)
     char todo[50] = "Hallo!";
     add_todo(list, todo);
     ASSERT_EQUAL(1, list->size);
-    delete_todo(list,1);
+    delete_todo(list, 1);
     ASSERT_EQUAL(0, list->size);
 }
 CTEST(insert_selection_func, checking_the_underscore_change)
@@ -52,7 +52,7 @@ CTEST(insert_selection_func, checking_the_underscore_change)
     list->color = (int*)calloc(1, sizeof(int));
     char todo[50] = "Hallo!";
     add_todo(list, todo);
-    insert_selection(list,1, 1);
+    insert_selection(list, 1, 1);
     ASSERT_EQUAL(1, list->selection[0]);
 }
 
@@ -65,6 +65,6 @@ CTEST(insert_color_func, checking_for_color_changes)
     list->color = (int*)calloc(1, sizeof(int));
     char todo[50] = "Hallo!";
     add_todo(list, todo);
-    insert_color(list,1, 2);
+    insert_color(list, 1, 2);
     ASSERT_EQUAL(2, list->color[0]);
 }
