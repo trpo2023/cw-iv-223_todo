@@ -10,7 +10,7 @@ int main()
     list->size = -1;
     list->selection = (int*)calloc(1, sizeof(int));
     list->color = (int*)calloc(1, sizeof(int));
-    FILE* file = fopen("../todo-лист.txt", "r");
+    FILE* file = fopen("todo-лист.txt", "r");
     char* g = malloc(sizeof(char) * 1000);
     if (file != NULL)
         fgets(g, 1000, file);
