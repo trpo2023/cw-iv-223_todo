@@ -4,15 +4,15 @@
 
 char colors[][5]
         = {"0;30",
-           /* Black */ "1;30",  /* Dark Gray */
+           /* Black */ "1;30", /* Dark Gray */
            "0;31",
-           /* Red */ "1;31",    /* Bold Red */
+           /* Red */ "1;31", /* Bold Red */
            "0;32",
-           /* Green */ "1;32",  /* Bold Green */
+           /* Green */ "1;32", /* Bold Green */
            "0;33",
            /* Yellow */ "1;33", /* Bold Yellow */
            "0;34",
-           /* Blue */ "1;34",   /* Bold Blue */
+           /* Blue */ "1;34", /* Bold Blue */
            "0;35",
            /* Purple */ "1;35", /* Bold Purple */
            "0;36",
